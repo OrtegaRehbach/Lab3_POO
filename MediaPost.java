@@ -1,4 +1,4 @@
-public class MediaPost extends Post {
+public abstract class MediaPost extends Post {
     private String url;
     private int size;
     private String type = "media";

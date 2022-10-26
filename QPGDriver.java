@@ -1,5 +1,6 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -85,5 +86,11 @@ public class QPGDriver {
                 tags.add(tag);
         }
         return (String[]) tags.toArray();
+    }
+
+    public Post[] getPublishedPosts() {
+        Post[] publishedPosts = new Post[this.publishedPosts.size()];
+        this.publishedPosts.toArray(publishedPosts);
+        return publishedPosts;
     }
 }
