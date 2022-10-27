@@ -2,8 +2,8 @@ public class ImagePost extends MediaPost {
     private String format;
     private int resolution;
 
-    public ImagePost(String author, String[] tags, String url, int size, String format, int resolution) {
-        super(author, tags, url, size);
+    public ImagePost(String author, String url, int size, String format, int resolution, String... tags) {
+        super(author, url, size, tags);
         this.format = format.toUpperCase();
         this.resolution = resolution;
         setType("image");

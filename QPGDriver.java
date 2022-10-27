@@ -24,6 +24,7 @@ public class QPGDriver {
     public boolean publishPost(Post post) {
         if (post != null) {
             this.publishedPosts.add(post);
+            this.tagList.addAll(Arrays.asList(post.getTags()));
             return true;
         } else {
             return false;
@@ -60,7 +61,7 @@ public class QPGDriver {
                         foundPosts.add(post);
                 }
             }
-            return (Post[]) foundPosts.toArray();
+            return foundPosts.toArray(new Post[foundPosts.size()]);
         } else {
             return null;
         }
@@ -85,12 +86,10 @@ public class QPGDriver {
             if (tag.startsWith("#"))
                 tags.add(tag);
         }
-        return (String[]) tags.toArray();
+        return tags.toArray(new String[tags.size()]);
     }
 
-    public Post[] getPublishedPosts() {
-        Post[] publishedPosts = new Post[this.publishedPosts.size()];
-        this.publishedPosts.toArray(publishedPosts);
-        return publishedPosts;
+    public ArrayList<Post> getPublishedPosts() {
+        return this.publishedPosts;
     }
 }

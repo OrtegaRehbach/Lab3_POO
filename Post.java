@@ -12,7 +12,7 @@ public abstract class Post {
     private String[] tags;
 
 
-    public Post(String author, String[] tags) {
+    public Post(String author, String... tags) {
         this.author = author;
         this.dateAndTime = LocalDateTime.now();
         this.likes = 0;

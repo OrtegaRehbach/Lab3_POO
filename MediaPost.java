@@ -3,7 +3,7 @@ public abstract class MediaPost extends Post {
     private int size;
     private String type = "media";
 
-    public MediaPost(String author, String[] tags, String url, int size) {
+    public MediaPost(String author, String url, int size, String... tags) {
         super(author, tags);
         this.url = url;
         this.size = size;

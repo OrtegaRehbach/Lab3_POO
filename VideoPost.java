@@ -1,8 +1,8 @@
 public class VideoPost extends MediaPost {
     private int frameRate;
 
-    public VideoPost(String author, String[] tags, String url, int size, int frameRate) {
-        super(author, tags, url, size);
+    public VideoPost(String author, String url, int size, int frameRate, String... tags) {
+        super(author, url, size, tags);
         this.frameRate = frameRate;
         setType("video");
     }

@@ -1,7 +1,7 @@
 public class TextPost extends Post {
     private String text;
 
-    public TextPost(String author, String[] tags, String text) {
+    public TextPost(String author, String text, String... tags) {
         super(author, tags);
         this.text = text;
     }

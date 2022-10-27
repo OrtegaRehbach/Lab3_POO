@@ -1,7 +1,7 @@
 public class EmojiPost extends Post {
     private String emoji;
 
-    public EmojiPost(String author, String[] tags, String emoji) {
+    public EmojiPost(String author, String emoji, String... tags) {
         super(author, tags);
         this.emoji = emoji;
     }
